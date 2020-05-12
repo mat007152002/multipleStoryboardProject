@@ -13,6 +13,7 @@
 		DDC28D0624693AC1009D7BAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC28D0424693AC1009D7BAD /* Main.storyboard */; };
 		DDC28D0824693AC3009D7BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDC28D0724693AC3009D7BAD /* Assets.xcassets */; };
 		DDC28D0B24693AC3009D7BAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC28D0924693AC3009D7BAD /* LaunchScreen.storyboard */; };
+		DDC28D1424693BB1009D7BAD /* SecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC28D1324693BB1009D7BAD /* SecViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DDC28D0724693AC3009D7BAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDC28D0A24693AC3009D7BAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDC28D0C24693AC3009D7BAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDC28D1324693BB1009D7BAD /* SecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,17 @@
 				DDC28D0724693AC3009D7BAD /* Assets.xcassets */,
 				DDC28D0924693AC3009D7BAD /* LaunchScreen.storyboard */,
 				DDC28D0C24693AC3009D7BAD /* Info.plist */,
+				DDC28D1224693B76009D7BAD /* SecViewController */,
 			);
 			path = multipleStoryboardProject;
+			sourceTree = "<group>";
+		};
+		DDC28D1224693B76009D7BAD /* SecViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DDC28D1324693BB1009D7BAD /* SecViewController.swift */,
+			);
+			path = SecViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC28D1424693BB1009D7BAD /* SecViewController.swift in Sources */,
 				DDC28D0324693AC1009D7BAD /* ViewController.swift in Sources */,
 				DDC28CFF24693AC1009D7BAD /* AppDelegate.swift in Sources */,
 				DDC28D0124693AC1009D7BAD /* SceneDelegate.swift in Sources */,
@@ -287,6 +299,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75Z834AYX6;
 				INFOPLIST_FILE = multipleStoryboardProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75Z834AYX6;
 				INFOPLIST_FILE = multipleStoryboardProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
