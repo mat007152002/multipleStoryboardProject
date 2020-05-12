@@ -10,6 +10,7 @@ import UIKit
 
 class SecViewController: UIViewController {
     
+    var closure : ((String)->())!
     var data = ""
     @IBOutlet var label1: UILabel!
     
@@ -17,7 +18,7 @@ class SecViewController: UIViewController {
         super.viewDidLoad()
         self.title = "SecView"
         label1.text = data
-        
+        closure(data)
 
         // Do any additional setup after loading the view.
     }
