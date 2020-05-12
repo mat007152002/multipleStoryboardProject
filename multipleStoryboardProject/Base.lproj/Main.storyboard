@@ -48,7 +48,7 @@
                         <barButtonItem key="backBarButtonItem" title="返回" id="5Yn-94-gmO"/>
                         <barButtonItem key="rightBarButtonItem" title="下一頁" id="rsE-8E-z6y">
                             <connections>
-                                <action selector="nextPage:" destination="BYZ-38-t0r" id="Erh-Sv-YuC"/>
+                                <segue destination="hn9-Jh-nJT" kind="show" identifier="showSecPage" id="nId-n7-oQ4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -74,6 +74,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fP4-KQ-SNb">
+                                <rect key="frame" x="184" y="501" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openThirdView:" destination="hn9-Jh-nJT" eventType="touchUpInside" id="Ouk-ZM-5ch"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -90,6 +98,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tf1-z4-APE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="981" y="100"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="DOx-LH-jXO">
+            <objects>
+                <viewController storyboardIdentifier="third" id="Tjo-Qg-Ntz" customClass="ThirdViewController" customModule="multipleStoryboardProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="third" id="bIj-Uy-WmA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxq-8x-0sq">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="PopButton" destination="Tjo-Qg-Ntz" eventType="touchUpInside" id="nTe-GU-0eR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Xdq-SB-0J5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ck1-qw-Fdj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="801"/>
         </scene>
     </scenes>
 </document>

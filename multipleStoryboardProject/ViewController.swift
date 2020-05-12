@@ -15,20 +15,29 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if(segue.identifier == "showSecPage") {
+            let VC = segue.destination as! SecViewController
+            VC.data = "使用segue傳遞資料"
+        }
+    }
+    
+    
+/*
     @IBAction func nextPage(_ sender: Any) {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
         let VC = storyBoard.instantiateViewController(withIdentifier: "SecViewController") as! SecViewController
         VC.data = "使用segue傳遞資料"
         present (VC, animated: true, completion: nil)
     }
-    
+    */
     
     @IBAction func nextPageByCode(_ sender: Any) {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
             let VC = storyBoard.instantiateViewController(withIdentifier: "SecViewController") as! SecViewController
             VC.data = "使用程式碼傳遞資料"
-            present (VC, animated: true, completion: nil)
+        navigationController?.pushViewController(VC, animated: true)
+            // present (VC, animated: true, completion: nil)
     
     }
     

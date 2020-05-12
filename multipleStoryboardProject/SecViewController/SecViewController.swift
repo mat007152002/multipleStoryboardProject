@@ -15,12 +15,31 @@ class SecViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "SecView"
         label1.text = data
+        
+
+        // Do any additional setup after loading the view.
+    }
+    @IBAction func openThirdView(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "third") as! ThirdViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+class ThirdViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "ThirdView"
+        view.backgroundColor = .red
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func PopButton() {
+        navigationController?.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 
@@ -31,4 +50,6 @@ class SecViewController: UIViewController {
     }
     */
 
-}
+    }
+
+
