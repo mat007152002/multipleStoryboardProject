@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         if(segue.identifier == "showSecPage") {
             let VC = segue.destination as! SecViewController
             VC.data = "使用segue傳遞資料"
+            VC.delegate = self
         }
     }
     
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
             let VC = storyBoard.instantiateViewController(withIdentifier: "SecViewController") as! SecViewController
             VC.data = "使用程式碼傳遞資料"
+            VC.delegate = self
         navigationController?.pushViewController(VC, animated: true)
             // present (VC, animated: true, completion: nil)
     
@@ -43,3 +45,8 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController : SecViewControllerDelegate{
+    func changeTitle(title : String) {
+        self.title = title
+    }
+}

@@ -10,6 +10,7 @@ import UIKit
 
 class SecViewController: UIViewController {
     
+    weak var delegate : SecViewControllerDelegate?
     var data = ""
     @IBOutlet var label1: UILabel!
     
@@ -17,7 +18,7 @@ class SecViewController: UIViewController {
         super.viewDidLoad()
         self.title = "SecView"
         label1.text = data
-        
+        delegate?.changeTitle(title: data)
 
         // Do any additional setup after loading the view.
     }
@@ -25,6 +26,13 @@ class SecViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(identifier: "third") as! ThirdViewController
         navigationController?.pushViewController(vc, animated: true)
     }
+}
+
+@objc protocol SecViewControllerDelegate {
+    //must do
+    func changeTitle(title:String)
+    //optional
+    @objc optional func selectFunction()
 }
 
 class ThirdViewController: UIViewController {
